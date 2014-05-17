@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yii\\2checkout\\": ""
+            "yii\\twocheckout\\": ""
         }
     }
 }
