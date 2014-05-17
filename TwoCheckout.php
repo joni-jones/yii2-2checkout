@@ -28,7 +28,7 @@ class TwoCheckout extends Object
     /** @var bool API requests mode */
     public $sandbox = false;
     /** @var string API response format */
-    public $format = 'json';
+    public $format = 'array';
 
     /** @var \yii\di\ServiceLocator $locator */
     private $locator = null;
