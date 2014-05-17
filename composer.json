@@ -1,0 +1,23 @@
+{
+    "name": "joni-jones/yii2-2checkout",
+    "description": "Yii2 extension for 2checkout library",
+    "keywords": ["yii2", "2Checkout","2co","payment","gateway"],
+    "minimum-stability": "dev",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ievgen Sentiabov",
+            "email": ""
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "2checkout/2checkout-php" : "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yii\\2checkout\\": ""
+        }
+    }
+}
