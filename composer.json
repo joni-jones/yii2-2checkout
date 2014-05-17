@@ -1,14 +1,13 @@
 {
     "name": "joni-jones/yii2-2checkout",
     "description": "Yii2 extension for 2checkout library",
-    "keywords": ["yii2", "2Checkout","2co","payment","gateway"],
-    "minimum-stability": "dev",
+    "keywords": ["yii2", "2Checkout", "2co", "payment", "gateway"],
     "type": "yii2-extension",
     "license": "MIT",
     "authors": [
         {
             "name": "Ievgen Sentiabov",
-            "email": ""
+            "email": "ievgen.sentiabov@gmail.com"
         }
     ],
     "require": {
