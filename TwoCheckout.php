@@ -2,7 +2,6 @@
 
 namespace yii\twocheckout;
 
-use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\Object;
 use yii\di\ServiceLocator;
