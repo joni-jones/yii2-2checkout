@@ -25,6 +25,21 @@ php composer.phar require --prefer-dist joni-jones/yii2-2checkout "*"
 Usage
 -----
 
-TBD
+Once the extension is installed, simply modify your application configuration as follows:
+
+```php
+return [
+    'components' => [
+        'twocheckout' => [
+            'class' => 'yii\twocheckout\Twocheckout',
+            'privateKey' => '',
+            'sellerId' => '',
+            'username' => '', //required to Admin API call
+            'password' => '', //required to Admin API call
+            'sandbox' => true, //by default false,
+        ]
+    ],
+    // ...
+];
 
 Full documentation you can find in [2Checkout Documentation](https://www.2checkout.com/documentation/libraries/php) site.
