@@ -16,6 +16,10 @@ class TwoCheckout extends Object
     public $privateKey = '';
     /** @var string seller id */
     public $sellerId = '';
+    /** @var string used to check payment requests */
+    public $secretWord = '';
+    /** @var string demo mode config. Available values 'Y' and 'N' */
+    public $demo = 'Y';
 
     /** @var string Admin API username */
     public $username = '';
@@ -53,6 +57,9 @@ class TwoCheckout extends Object
             throw new InvalidConfigException('Invalid seller id was specified');
         }
         \Twocheckout::sellerId($this->sellerId);
+        if (!$this->secretWord) {
+            throw new InvalidConfigException('Invalid secret word was specified');
+        }
         \TwoCheckout::verifySSL($this->verifySSL);
         \Twocheckout::sandbox($this->sandbox);
         \Twocheckout::format($this->format);

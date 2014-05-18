@@ -34,6 +34,7 @@ return [
             'class' => 'yii\twocheckout\Twocheckout',
             'privateKey' => '',
             'sellerId' => '',
+            'secretWord' => '', //by default is 'tango'
             'username' => '', //required to Admin API call
             'password' => '', //required to Admin API call
             'sandbox' => true, //by default false,
@@ -42,4 +43,6 @@ return [
     // ...
 ];
 
-Full documentation you can find in [2Checkout Documentation](https://www.2checkout.com/documentation/libraries/php) site.
+
+
+Full documentation you can find on [2Checkout](https://www.2checkout.com/documentation/libraries/php) site.
