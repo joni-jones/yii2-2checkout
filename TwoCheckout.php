@@ -9,6 +9,11 @@ use yii\di\ServiceLocator;
 /**
  * Class TwoCheckout
  * @package yii\twocheckout
+ *
+ * @property \yii\twocheckout\TwoCheckoutCharge $charge
+ * @property \yii\twocheckout\TwoCheckoutMessage $message
+ * @property \yii\twocheckout\TwoCheckoutNotification $notification
+ * @property \yii\twocheckout\TwoCheckoutReturn $return
  */
 class TwoCheckout extends Object
 {
@@ -77,6 +82,65 @@ class TwoCheckout extends Object
             $this->locator->set('charge', '\yii\twocheckout\TwoCheckoutCharge');
         }
         return $this->locator->get('charge');
+    }
+
+    /**
+     * Get twocheckout message class instance
+     *
+     * @access public
+     * @return \yii\twocheckout\TwoCheckoutMessage
+     */
+    public function getMessage()
+    {
+        if (!$this->locator->has('message')) {
+            $this->locator->set('message', '\yii\twocheckout\TwoCheckoutMessage');
+        }
+        return $this->locator->get('message');
+    }
+
+    /**
+     * Get twocheckout notification class instance
+     *
+     * @access public
+     * @return \yii\twocheckout\TwoCheckoutNotification
+     */
+    public function getNotification()
+    {
+        if (!$this->locator->has('notification')) {
+            $this->locator->set('notification', '\yii\twocheckout\TwoCheckoutNotification');
+        }
+        return $this->locator->get('notification');
+    }
+
+    /**
+     * Get twocheckout return class instance
+     *
+     * @access public
+     * @return \yii\twocheckout\TwoCheckoutReturn
+     */
+    public function getReturn()
+    {
+        if (!$this->locator->has('return')) {
+            $this->locator->set('return', '\yii\twocheckout\TwoCheckoutReturn');
+        }
+        return $this->locator->get('return');
+    }
+
+    /**
+     * Check payment status
+     *
+     * @access public
+     * @param array $params
+     * @return bool
+     */
+    public function approve(array $params)
+    {
+        //if demo mode enable order number must be always '1'
+        if (!empty($params['demo']) && $params['demo'] == 'Y') {
+            $params['order_number'] = 1;
+        }
+        $passback = $this->return->check($params, $this->secretWord, 'array');
+        return ($passback['response_code'] == 'Success');
     }
 }
  
