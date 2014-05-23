@@ -42,7 +42,23 @@ return [
     ],
     // ...
 ];
+```
 
+The `Charge` class usage example (equal to `Twocheckout_Charge::form()`):
 
+```php
+$product['currency_code'] = 'USD';
+$product['mode'] = '2CO';
+$product['li_0_price'] = '0.01';
+$product['merchant_order_id'] = '1122312';
+$product['li_0_name'] = 'Credit';
+$product['li_0_quantity'] = '1';
+$product['li_0_type'] = 'product';
+$product['li_0_tangible'] = 'N';
+$product['li_0_product_id'] = '43242342';
+$product['sid'] = Yii::$app->twocheckout->sellerId;
+$product['demo'] = Yii::$app->twocheckout->demo;
+Yii::$app->twocheckout->charge->form($product);
+```
 
 Full documentation you can find on [2Checkout](https://www.2checkout.com/documentation/libraries/php) site.
