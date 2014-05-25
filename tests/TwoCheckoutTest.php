@@ -7,19 +7,24 @@ use yii\twocheckout\TwoCheckout;
 
 class TwoCheckoutTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \yii\twocheckout\TwoCheckout */
+    /** @var \yii\twocheckout\TwoCheckout $twoCheckout*/
     public $twoCheckout;
 
     public function setUp()
     {
-        $this->twoCheckout = new TwoCheckout();
+        $this->twoCheckout = Yii::createObject([
+            'class' => '\yii\twocheckout\TwoCheckout',
+            'privateKey' => 'nti123mt',
+            'sellerId' => '112233',
+            'secretWord' => 'tango',
+        ]);
     }
 
     public function testInitialization()
     {
-        $this->assertAttributeNotEmpty('privateKey', $this->twoCheckout, 'Private Key should not be empty');
-        $this->assertAttributeNotEmpty('sellerId', $this->twoCheckout, 'Seller Id should not be empty');
-        $this->assertAttributeNotEmpty('secretWord', $this->twoCheckout, 'Secret Word should not be empty');
+        $this->assertAttributeEquals('nti123mt', 'privateKey', $this->twoCheckout);
+        $this->assertAttributeEquals('112233', 'sellerId', $this->twoCheckout);
+        $this->assertAttributeEquals('tango', 'secretWord', $this->twoCheckout);
     }
 }
  
