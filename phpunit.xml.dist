@@ -8,6 +8,7 @@
     <testsuites>
         <testsuite name="TwoCheckout Test Suite">
             <file>./tests/TwoCheckoutTest.php</file>
+            <file>./tests/TwoCheckoutChargeTest.php</file>
         </testsuite>
     </testsuites>
     <filter>
