@@ -58,6 +58,7 @@ $product['li_0_tangible'] = 'N';
 $product['li_0_product_id'] = '43242342';
 $product['sid'] = Yii::$app->twocheckout->sellerId;
 $product['demo'] = Yii::$app->twocheckout->demo;
+$product['key'] = md5($product['merchant_order_id'].$product['li_0_product_id']);
 Yii::$app->twocheckout->charge->form($product);
 ```
 
