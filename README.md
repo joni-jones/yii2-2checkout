@@ -31,7 +31,7 @@ Once the extension is installed, simply modify your application configuration as
 return [
     'components' => [
         'twocheckout' => [
-            'class' => 'yii\twocheckout\Twocheckout',
+            'class' => 'yii\twocheckout\TwoCheckout',
             'privateKey' => '',
             'sellerId' => '',
             'secretWord' => '', //by default is 'tango'
