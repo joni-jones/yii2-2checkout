@@ -3,6 +3,10 @@
 
 Extension provides access for [2Checkout library](https://github.com/2Checkout/2checkout-php) methods from Yii2 framework.
 
+[![Latest Stable Version](https://poser.pugx.org/joni-jones/yii2-2checkout/v/stable)](https://packagist.org/packages/joni-jones/yii2-2checkout)
+[![Total Downloads](https://poser.pugx.org/joni-jones/yii2-2checkout/downloads)](https://packagist.org/packages/joni-jones/yii2-2checkout)
+[![License](https://poser.pugx.org/joni-jones/yii2-2checkout/license)](https://packagist.org/packages/joni-jones/yii2-2checkout)
+
 How to install?
 ---------------
 
